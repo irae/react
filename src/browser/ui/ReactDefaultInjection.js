@@ -24,6 +24,7 @@ var ExecutionEnvironment = require('ExecutionEnvironment');
 
 var DefaultDOMPropertyConfig = require('DefaultDOMPropertyConfig');
 
+var TapEventPlugin = require('TapEventPlugin');
 var ChangeEventPlugin = require('ChangeEventPlugin');
 var ClientReactRootIndex = require('ClientReactRootIndex');
 var CompositionEventPlugin = require('CompositionEventPlugin');
@@ -69,6 +70,7 @@ function inject() {
    * them).
    */
   ReactInjection.EventPluginHub.injectEventPluginsByName({
+    TapEventPlugin: TapEventPlugin,
     SimpleEventPlugin: SimpleEventPlugin,
     EnterLeaveEventPlugin: EnterLeaveEventPlugin,
     ChangeEventPlugin: ChangeEventPlugin,
